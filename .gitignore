@@ -1,7 +1,6 @@
 __pycache__/
 .data/
 .models/
-.images/
 *.sh
 .archive/
 .notebooks/
