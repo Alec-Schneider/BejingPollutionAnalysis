@@ -1,0 +1,230 @@
+---
+title: "Arima Modelling"
+author: "Alec Schneider"
+date: "3/26/2021"
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+library(tseries)
+library(TSstudio)
+library(forecast)
+library(xts)
+library(tidyverse)
+
+
+```
+
+## R Markdown
+
+```{r}
+data <- read.csv("./.data/bejing_air_quality/cleaned/PRSA_Data_Aotizhongxin_20130301-20170228.csv")
+
+# Drop the categorical columns
+data <- data[, -14]
+data <- data[, -12]
+
+
+times <- strptime(data[, "timestamp"], format="%Y-%m-%d %H:%M:%S", tz="EST")
+data2 <- xts(data[, -1], order.by = times)
+```
+
+
+```{r}
+data_train <- read.csv("./.data/bejing_air_quality/cleaned/train/PRSA_Data_Aotizhongxin_20130301-20170228.csv")
+head(data_train)
+
+data_train_xts <- xts(data_train, order.by=times)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+pm25 <- data2[, 1]
+ts_plot(pm25, 
+        title = "PM 2.5",
+        Ytitle = "Concentration",
+        Xtitle = "Measurement")
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r}
+# Seasonal plot
+#ts_seasonal(ts(pm25, type = "all"))
+```
+
+```{r}
+
+ts_cor(ts(pm25), lag.max=24)
+```
+
+
+```{r}
+ts_quantile(pm25)
+```
+
+```{r}
+ts_quantile(pm25, period="monthly", title="PM2.5 Levels By Month", n=4)
+```
+
+
+```{r}
+ts_heatmap(to.monthly(pm25))
+```
+
+```{r}
+ts_heatmap(to.weekly(pm25))
+```
+
+```{r}
+ts_heatmap(to.daily(pm25), color="Reds")
+```
+
+
+
+### Train a model
+
+```{r}
+
+pm25_split <- ts_split(ts.obj=ts(pm25), sample.out=24* 7)
+train <- pm25_split$train
+test <- pm25_split$test
+
+```
+
+
+```{r}
+ar <- auto.arima(train)
+fc <- forecast(ar, h=24*7)
+
+```
+
+
+```{r}
+#Plotting actual vs. fitted and forecasted
+test_forecast(actual = pm25, forecast.obj = fc, test = test)
+
+# Plotting the forecast 
+plot_forecast(fc)
+```
+
+```{r}
+ar$summary_plot
+```
+
+
+```{r}
+
+# Run horse race between multiple models
+methods <- list(ets1 = list(method = "ets",
+                            method_arg = list(opt.crit = "lik"),
+                            notes = "ETS model with opt.crit = lik"),
+                # ets2 = list(method = "ets",
+                #             method_arg = list(opt.crit = "amse"),
+                #             notes = "ETS model with opt.crit = amse"),
+                arima1 = list(method = "arima",
+                              method_arg = list(order = c(2,1,0)),
+                              notes = "ARIMA(2,1,0)"))
+                # hw = list(method = "HoltWinters",
+                #           method_arg = NULL,
+                #           notes = "HoltWinters Model")
+
+                # )
+
+               #arima2 = list(method = "arima",
+                #              method_arg = list(order = c(2,1,2),
+                #                                seasonal = list(order = c(1,1,1))),
+                #              notes = "SARIMA(2,1,2)(1,1,1)"),
+                # tslm = list(method = "tslm",
+                #             method_arg = list(formula = input ~ trend + season),
+                #             notes = "tslm model with trend and seasonal components")
+```
+
+
+
+```{r}
+md <- train_model(input = ts(pm25),
+                  methods = methods,
+                  train_method = list(partitions = 6, 
+                                      sample.out = 24 * 150, 
+                                      space = 3),
+                  horizon = 24 * 150,
+                  error = "RMSE")
+
+
+```
+
+
+
+
+```{r}
+plot_model(md)
+```
+
+
+```{r}
+save(md)
+
+```
+
+
+```{r}
+```
+
+
+```{r}
+library(reshape2)
+round(cor(na.omit(data2)),2)
+```
+
+
+```{r}
+corr_mat <- round(cor(na.omit(data_train_xts[, 1:18])),2)
+melted_corr <- melt(corr_mat)
+
+ggplot(melted_corr, aes(x=Var1, y=Var2, fill=value, label=value)) +
+  geom_tile() +
+  geom_text(color="white", size=3) +
+  ggtitle("Correlation Matrix of Numeric Variables") +
+  scale_fill_viridis_c() +
+  theme(axis.text.x=element_text(angle=90))
+```
+```{r}
+head(data_train_xts$cos_sin__Hour.cos)
+```
+
+
+
+```{r}
+corr_mat <- round(cor(na.omit(data2)),2)
+melted_corr <- melt(corr_mat)
+
+ggplot(melted_corr, aes(x=Var1, y=Var2, fill=value, label=value)) +
+  geom_tile() +
+  geom_text(color="white", size=3) +
+  ggtitle("Correlation Matrix of Numeric Variables") +
+  scale_fill_viridis_c() +
+  theme(axis.text.x=element_text(angle=90))
+```
+```{r}
+
+
+```
+
+
+```{r}
+```
+
+
+```{r}
+```
+
+
+```{r}
+rm(data)
+```

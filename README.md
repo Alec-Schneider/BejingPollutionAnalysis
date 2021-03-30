@@ -1,0 +1,74 @@
+
+## Data Dictionary:
+- Deliquency Rate on Credit Card Loans, All Commercial Banks (DRCCLACBS) - Quarterly, End of Period, Percent, Seasonally Adjusted
+- Delinquency Rate on Commercial and Industrial Loans, All Commercial Banks (DRBLACBS) - Quarterly, End of Period, Percent, Seasonally Adjusted
+- Delinquency Rate on Single-Family Residential Mortgages, Booked in Domestic Offices, All Commercial Banks (DRSFRMACBS) - Quarterly, End of Period, Percent, Seasonally Adjusted
+- Student Loans Owned and Securitized, Outstanding (SLOAS) - Quarterly, End of Period, Billions of Dollars, Not Seasonally Adjusted
+- Deposits, All Commercial Banks (H8B1058NCBCMG) - Monthly, Percent Change at Annual Rate, Seasonally Adjusted
+- Commercial and Industrial Loans, All Commercial Banks (H8B1023NCBCMG) - Monthly, Percent Change at Annual Rate, Seasonally Adjusted
+- Nonperforming Total Loans (past due 90+ days plus nonaccrual) to Total Loans (NPTLTL) - Quarterly, End of Period, Percent, Not Seasonally Adjusted
+- Loan Loss Reserve to Total Loans for all U.S. Banks (USLLRTL) - Quarterly, End of Period, Percent, Not Seasonally Adjusted
+- CBOE Volatility Index: VIX (VIXCLS) - Daily, Close, Index, Not Seasonally Adjusted
+- Velocity of M1 Money Stock (M1V) - Quarterly, Ratio, Seasonally Adjusted
+- Velocity of M2 Money Stock (M2V) - Quarterly, Ratio, Seasonally Adjusted
+- 3-Month London Interbank Offered Rate (LIBOR) (LIOR3M) - Quarterly, Percent, Not Seasonally Adjusted
+- 12-Month London Interbank Offered Rate (LIBOR), based on U.S. Dollar (USD12MD156N) - Daily, Percent, Not Seasonally Adjusted
+- ICE Swap Rates, 3:00 P.M. (London Time), Based on U.S. Dollar, 1 Year Tenor (ICERATES1500USD1Y) - Daily, Percent, Not Seasonally Adjusted
+- ICE Swap Rates, 11:00 A.M. (London Time), Based on U.S. Dollar, 10 Year Tenor (ICERATES1100USD10Y) - Daily, Percent, Not Seasonally Adjusted
+- 10-Year Treasury Constant Maturity Minus 2-Year Treasury Constant Maturity (T10Y2Y) - Daily, Percent, Not Seasonally Adjusted
+- TED Spread (TEDRATE) - Daily, Percent, Not Seasonally Adjusted
+- 3-Month AA Financial Commercial Paper Rate (CPF3M) - Monthly, Percent, Seasonally Adjusted
+- 3-Month AA Nonfinancial Commercial Paper Rate (CPN3M) - Monthly, Percent, Seasonally Adjusted
+- ICE BofA US High Yield Index Effective Yield (BAMLH0A0HYM2EY) - Daily, Close, Percent, Not Seasonally Adjusted
+- ICE BofA BBB US Corporate Index Effective Yield (BAMLC0A4CBBBEY) - Daily, Close, Percent, Not Seasonally Adjusted
+- ICE BofA AAA US Corporate Index Effective Yield (BAMLC0A1CAAAEY) - Daily, Close, Percent, Not Seasonally Adjusted
+- Effective Federal Funds Rate (FEDFUNDS) - Monthly, Percent, Not Seasonally Adjusted
+- Assets: Total Assets: Total Assets (Less Eliminations from Consolidation): Wednesday Level (WALCL) - Weekly, As of Wednesday, Millions of U.S. Dollars, Not Seasonally Adjusted
+- Overnight Reverse Repurchase Agreements: Treasury Securities Sold by the Federal Reserve in the Temporary Open Market Operations (RRPONTSYD) - Daily, Billions of US Dollars, Not Seasonally Adjusted
+- Overnight Bank Funding Rate (OBFR) - Daily, Percent, Not Seasonally Adjusted
+- Assets: Securities Held Outright: U.S. Treasury Securities: Wednesday Level (WSHOTSL) - Weekly, As of Wednesday, Millions of U.S. Dollars, Not Seasonally Adjusted
+- 3-Month Treasury Bill: Secondary Market Rate (TB3MS) - Monthly, Percent, Not Seasonally Adjusted
+- 1-Year Treasury Bill: Secondary Market Rate (TB1YR) - Monthly, Percent, Not Seasonally Adjusted
+- 4-Week Treasury Bill: Secondary Market Rate (TB4WK) - Monthly, Percent, Not Seasonally Adjusted
+- 30-Year Fixed Rate Mortgage Average in the United States (MORTGAGE30US) - Weekly, Ending Thursday, Percent, Not Seasonally Adjusted
+- U.S. / Euro Foreign Exchange Rate (EXUSEU) - Monthly, U.S. Dollars to One Euro, Not Seasonally Adjusted
+- Japan / U.S. Foreign Exchange Rate (EXJPUS) - Monthly, Japanese Yen to One U.S. Dollar, Not Seasonally Adjusted
+- China / U.S. Foreign Exchange Rate (EXCHUS) - Monthly, Chinese Yuan to One U.S. Dollar, Not Seasonally Adjusted
+- U.S. / U.K. Foreign Exchange Rate (EXUSUK) - Monthly, U.S. Dollars to One British Pound, Not Seasonally Adjusted
+- Brazil / U.S. Foreign Exchange Rate (EXBZUS) - Monthly, Brazilian Reals to One U.S. Dollar, Not Seasonally Adjusted
+- St. Louis Fed Financial Stress Index (STLFSI2) - Weekly, Ending Friday, Index, Not Seasonally Adjusted
+- University of Michigan: Consumer Sentiment (UMCSENT) - Monthly, Index 1966:Q1=100, Not Seasonally Adjusted
+- Chicago Fed National Financial Conditions Index (NFCI) - Weekly, Ending Friday, Index, Not Seasonally Adjusted
+- S&P 500 (SP500) - Daily, Close, Index, Not Seasonally Adjusted
+- Wilshire 5000 Total Market Full Cap Index (WILL5000INDFC) - Daily, Close, Index, Not Seasonally Adjusted
+- NASDAQ 100 Index (NASDAQ100) - Daily, Close, Index, Not Seasonally Adjusted
+- Dow Jones Industrial Average (DJIA) - Daily, Close, Index, Not Seasonally Adjusted
+- Commercial Paper Outstanding (DTBSPCKM) - Monthly, Millions of Dollars, Seasonally Adjusted
+- Manufacturing Sector: Labor Productivity (MPU9900063) - Annual, Percent Change from Year Ago, Not Seasonally Adjusted
+- Manufacturing Sector: Real Output (PRS30006042) - Quarterly, Percent Change at Annual Rate, Seasonally Adjusted
+- Manufacturing Sector: Unit Labor Cost (PRS30006112) - Quarterly, Percent Change at Annual Rate, Seasonally Adjusted
+- Private Business Sector: Labor Productivity (MPU4900063) - Annual, Percent Change from Year Ago, Not Seasonally Adjusted
+- Business Sector: Labor Share (PRS84006172) - Quarterly, Percent Change at Annual Rate, Seasonally Adjusted
+- Women Employees-To-All Employees Ratio: Total Nonfarm (CES0000000039) - Monthly, Percent, Seasonally Adjusted
+- Real Median Household Income in the United States (MEHOINUSA672N) - Annual, 2019 CPI-U-RS Adjusted Dollars, Not Seasonally Adjusted
+- Real Median Personal Income in the United States (MEPAINUSA672N) - Annual, 2019 CPI-U-RS Adjusted Dollars, Not Seasonally Adjusted
+- Share of Total Net Worth Held by the Top 1% (99th to 100th Wealth Percentiles) (WFRBST01134) - Quarterly, Percent of Aggregate, Not Seasonally Adjusted
+- Median Family Income in the United States (MEFAINUSA646N) - Annual, Current Dollars, Not Seasonally Adjusted
+- Share of Corporate Equities and Mutual Fund Shares Held by the Top 1% (99th to 100th Wealth Percentiles) (WFRBST01122) - Quarterly, Percent of Aggregate, Not Seasonally Adjusted
+- Initial Claims (ICSA) - Weekly, Ending Saturday, Number, Seasonally Adjusted
+- Continued Claims (Insured Unemployment) (CCSA) - Weekly, Ending Saturday, Number, Seasonally Adjusted
+- Job Openings: Total Nonfarm (JTSJOR) - Monthly, Rate, Seasonally Adjusted
+- Quits: Total Nonfarm (JTSQUR) - Monthly, Rate, Seasonally Adjusted
+- Layoffs and Discharges: Total Nonfarm (JTSLDR) - Monthly, Rate, Seasonally Adjusted
+- Federal Surplus or Deficit (MTSDS133FMS) - Monthly, Millions of Dollars, Not Seasonally Adjusted
+- Federal Debt: Total Public Debt as Percent of Gross Domestic Product (GFDEGDQ188S) - Quarterly, Percent of GDP, Seasonally Adjusted
+- Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (CPIAUCSL) - Monthly, Index 1982-1984=100, Seasonally Adjusted
+- Personal Consumption Expenditures: Chain-type Price Index (PCEPI) - Monthly, Index 2012=100, Seasonally Adjusted
+- Health Expenditures Price Index, MEPS Account Basis (HLTHSCPIMEPS) - Annual, Index 2009=100, Not Seasonally Adjusted
+- S&P/Case-Shiller U.S. National Home Price Index (CSUSHPINSA) - Monthly, Index Jan 2000=100, Not Seasonally Adjusted
+- Federal Debt Held by Foreign and International Investors (FDHBFIN) - Quarterly, End of Period, Billions of Dollars, Not Seasonally Adjusted
+- Federal Outlays: Interest as Percent of Gross Domestic Product (FYOIGDA188S) - Annual, Percent of GDP, Not Seasonally Adjusted
+- Federal Debt Held by Federal Reserve Banks (FDHBFRBN) - Quarterly, End of Period, Billions of Dollars, Not Seasonally Adjusted
+- Crude Oil Prices: West Texas Intermediate (WTI) - Cushing, Oklahoma (MCOILWTICO) - Monthly, Dollars per Barrel, Not Seasonally Adjusted
+- Henry Hub Natural Gas Spot Price (MHHNGSP) - Monthly, Dollars per Million BTU, Not Seasonally Adjusted
+- Gold Fixing Price 10:30 A.M. (London time) in London Bullion Market, based in U.S. Dollars (GOLDPMGBD228NLBM) - Daily, U.S. Dollars per Troy Ounce, Not Seasonally Adjusted
