@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Schneider
+    given-names: Alec
+title: "Alec’s Power Corp. Power Plant Investment Analysis"
+version: 1.0
+date-released: 2021-03-30
+url: "https://github.com/Alec-Schneider/BejingPollutionAnalysis"
