@@ -6,36 +6,6 @@ import math
 _device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 
 
-# class BasicTransformer(nn.Module):
-#     def __init__(
-#         self,
-#         input_seq_length,
-#         output_seq_length = None,
-#         input_pad_idx = 0
-#         output_pad_idx = 0
-#         heads = 8,
-#         device="cuda"):
-
-#         super().__init__()
-        
-
-#         if output_seq_length is None:
-#             output_seq_length = input_seq_length
-        
-#         self.input_seq_len = input_seq_length
-#         self.output_seq_len = output_seq_len
-#         self.input_pad_idx = input_pad_idx
-#         self.output_pad_idx = output_pad_idx
-
-#         self.device = device
-        
-        
-        
-
-#     def make_input_mask(self, in_seq):
-#         src_mask = (in_seq != self.in_pad_idx).unsqueeze(1).unsqueeze(2) # (N, 1, 1, in_len)
-#         return input_mask.to(self.device)
-
 
 class PositionalEncoding(nn.Module):
     """
